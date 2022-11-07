@@ -1,0 +1,256 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <aside style="float:right;background-color:rgb(200, 147, 235);width: 400px;margin: 10px;border: 10px double;padding: 10px;">
+        <h2 style="text-align:center;">Chapter Outline</h2>
+        <ol><a href="#basicHtml"><strong>2.1 Basic HTML</strong></a></ol>
+        <ol><a href="#history">2.1.1 History</a></ol>
+        <ol><a href="#pageStructure">2.1.2 Page Structure</a></ol>
+        <ol><a href="#blockElements">2.1.3 Block Elements</a></ol>
+        <ol>2.1.4 Inline Elements</ol>
+        <br>
+        <ol><strong>2.2 More HTML Elements</strong></ol>
+        <ol>2.2.1 lists</ol>
+        <ol>2.2.2 Tables</ol>
+        <ol>2.2.3 Quotations</ol>
+        <ol>2.2.4 Pre-Formatted Text</ol>
+        <ol>2.2.5 A few Miscellaneous Elements</ol>
+        <ol>2.2.6 Audio and Video</ol>
+        <br>
+        <ol><strong>2.3Web Standards</strong> </ol>
+        <ol>2.3.1 Why Follow Web Standards?</ol>
+        <ol>2.3.2 The W3C HTML Validator</ol>
+        <ol>2.3.3 Web Page Metadata</ol>
+    </aside>
+
+    <section id="intro"><h2>Introduction</h2>
+        <p>We'll begin our study of web programming by learning the core language for writing web pages:
+        Hypertext Markup Language (HTML). HTML describes the contents of your page, such as headings, paragraphs, images, and lists. 
+        The version of HTML we'll learn is the latest and most standard, called HTML5. The pages you'll write will work in any modern browser.
+        This chapter doesn't attempt to provide a complete list of HTML tags and attributes. Certain aspects of the language, such as forms and tables, are left for later chapters that focus on those elements.</p>
+        <h2 id="basicHtml">2.1 Basic HTML</h2>
+        <p>In this section we'll discuss the basics of HTML and web pages, as well as a brief history of the language and how it came to be the way it is today. In following sections we'll dive into the details of HTML syntax for creating complex web pages.</p>
+        <h2 id="history">2.1.1 History</h2>
+        <p>Since its creation in 1991 by Tim Berners-Lee, one of the founding fathers of the Internet, HTML has been the dominant language for creating web pages. HTML is a language consisting of text content surrounded by markings that specify the meaning of the content. As with many languages, HTML has gone through different versions and standardization processes over the years:</p>
+        <li>1993: Initial official proposed description of HTML submitted to the IETF standards group.</li>
+        <li>1995: HTML 2 becomes an official standard language by a publication called RFC 1866.</li>
+        <li>1996-97: HTML 3.2 standardizes various features including forms, tables, image maps, and internationalization.</li>
+        <li>1997: HTML 4 is proposed by W3C standards body, adding style sheets, scripting, frames, embedding objects, internationalization, and accessibility for disabilities.</li>
+        <li>HTML 4.01, the last major version of the language, is published in 1999 by W3C. A majority of the pages on the web today still use HTML 4.01 as their stated language.</li>
+        <li>2000-01: XHTML, a more standardized offshoot of HTML based on a language named XML, is proposed by W3C.</li>
+        <li>2011-12: HTML5, an ambitious new version of the web language intended to address the evolution of the web into a platform for applications and multimedia, is developed by W3C.</li>
+    </section>
+
+    <section>
+        <p>
+        The language has several major goals that are reflected in the evolution made to it over the years. Each new version has endeavored to: add new features; improve interoperability, make HTML compatible with all major browsers, platforms, and devices; and be accessible to all kinds of users, including those with disabilities affecting sight and hearing.
+        In these chapters we will focus on <i>HTML5</i>, a more recently created dialect of HTML. HTML5 is a more modern and stricter language than older versions of HTML, and its syntax is more regular and standardized. HTML5 has a more clearly refined set of goals than past versions of HTML. While older HTML was a mixed language used to describe a document's content, appearance, and behavior, properly written HTML5 chooses to focus solely on describing the document's content and structure. The tasks of describing exactly how the document should look and how it should behave are handled by other languages that interact with HTML.
+        At the time of this writing, not all web browsers support every new feature of HTML5 properly. For this reason, throughout the textbook when we show a feature that is new to HTML5, we will place the official HTML5 "shield" logo next to that feature: This way you will be aware that the feature may not work properly for users with older browsers. Every web developer must face the difficult decision between utilizing the newest features and reaching the widest possible audience.
+
+        A well-written web page has the following division of responsibilities:
+        </p>
+        <li>HTML describes the content of the document.</li>
+        <li>Style Sheets (written in a language named CSS) describe the appearance of the document.</li>
+        <li>Scripts (written in languages such as JavaScript) describe the behavior of the document.</li>
+        <p>We will learn the HTML syntax in detail throughout this chapter and later chapters. Example 2.1  shows an initial example of a complete HTML document. Figure 2.1 shows the output when you save the above code into a file called <a href="wonderfulworld.html">wonderfulworld.html</a> and open it in the Firefox browser.
+        In general it does not matter what name you give to your HTML file, but one particular file name is worth mentioning. Most web servers consider the filename <a href="index.html">index.html</a> (and similar names such as <a href="index.php">index.php</a>, <a href="index.jsp">index.jsp</a>, etc. ) to represent the main page for a particular web site. So if you omit the file name from a URL, index.html is assumed to be the filename. This is useful because, for example, you can tell people your web site's URL is <a href="http://www.example.com/">http://www.example.com/</a>, and when they visit that URL, they'll actually be shown the contents of <a href="http://www.example.com/index.html">http://www.example.com/index.html</a>.
+        </p>
+        <br>
+        <pre style="background-color: rgb(234, 189, 255);width: 700px;border: 2px solid #3949ab;padding: 10px;">
+        &lt;!DOCTYPE html&gt; 
+        &lt;html&gt; 
+            &lt;head&gt;
+                &lt;title&gt;What a Wonderful Worldl&lt;/title&gt; 
+            &lt;/head&gt; 
+                    
+            &lt;body&gt; 
+                &lt;hl&gt;My first web page&lt;/hl&gt;
+                    
+                &lt;p&gt; 
+                    A friend told me once that he thought the 
+                    in URLs stood for what a wonderful world 
+                    (I think it does!). 
+                &lt;/p&gt; 
+            &lt;/body&gt; 
+        &lt;/html&gt;             
+        </pre>
+        <p style="text-align: center;"> <strong>Example 2.1 Basic web page <a href="wonderfulworld.html">wonderfulworld.html</a></strong> </p>   
+    </section>
+
+    
+    <section>
+        <img  src="img/fig2.1.png" alt="my first web page" style="width: 400px;">
+        <p style="text-align: center;"><strong>Figure 2.1 Basic web page appearance in Firefox browser</strong></p>
+        
+        <aside style="float: left;background-color: rgb(127, 251, 255);width: 200px;border: 5px solid rgb(16, 92, 233);padding: 10px;margin: 20px;">    
+            <p>
+                element <br>
+                A piece of HTML markup that surrounds text content and describes its meaning in the page.        
+             </p>
+            </aside>
+        <p>HTML is a rich and complex language that can describe not only standard text documents but also tables of data, forms for sending information to a server (such as for purchasing items from an online store), complex images and multimedia, interactive games, and more. Because the language is so rich, we will study it in layers, learning more of its features in several subsequent chapters. In this chapter, we'll learn the basics of structuring text content and images.
+        </p>
+        
+        <p>
+            An HTML document is a text file named with an <code>.html</code> extension. It contains text content and HTML markup to tell the browser how that content should be structured. The <i>content</i> is information that you would like the user to see. The <i>markup</i> consists of <i>tags</i> that describe the content and tell the browser how to structure and display it.
+        </p>
+        <p>
+            Tags consist of a lowercase tag name surrounded by angle brackets. For example, a paragraph is represented by the &lt;p&gt; tag. Most tags come in pairs, with an opening tag (for example, &lt;p&gt;) followed by some text, followed by a closing tag (for example, &lt;/p&gt;). A pair of HTML tags and their enclosed content are collectively called an <i>element</i>. Figure 2.2 summarizes the basic syntax of an HTML element.
+        </p>
+        <img src="img/fig2.2.png" alt="img 2.2" style="width: 400px;">
+        <p style="text-align: center;"><strong>Figure 2.2 A paragraph element</strong></p>
+        <p>
+            The syntax of HTML5 allows some elements to omit their closing tags under certain conditions, but it is hard to remember these cases and it is error-prone to rely on this behavior, so we will always include proper closing tags on elements in our examples.
+
+        </p>
+        <h2 id="pageStructure">2.1.2 Page Structure</h2>
+        <p>
+            The basic syntax of an HTML page is shown in Example 2.2. Every page we write in this textbook will have this same basic structure. When we show code examples later in the chapter and elsewhere in the book, we will show just a subset of the page, only the relevant contents of the body.
+        </p>
+    </section>
+    
+    <section>
+        
+        <pre style="background-color: #adb8f5;border: 2px rgb(85 108 237) solid;padding: 10px;width: 700px;">
+        &lt;!DOCTYPE html&gt; 
+        &lt;html&gt;
+            &lt;head&gt;
+                &lt;title>page title&lg;title&gt;
+                other resources or information about the page
+            &lt;/head&gt;
+            
+            &lt;body&gt;
+                page content
+            &lt;/body&gt;
+        &lt;/html&gt;
+        </pre>
+
+        <p style="text-align: center"><strong>Example 2.2 Syntax template for a basic HTML page</strong></p>
+        <p>
+        The first two lines are the document type definition and opening <strong>html</strong> tag. The DOCTYPE line represents a document type definition, a declaration that our page is written using HTML5 syntax; the opening <strong>html</strong> tag specifies the beginning of the page. These lines are required if we want our page to comply with web standards. Therefore these exact two lines will appear at the top of every web page we write in this textbook, so you can copy them and paste them into the pages you write.
+        The rest of the page consists of two major sections, the header and body. The header, represented by the <strong>head</strong> tag, contains general information about the page. The body, represented by the <strong>body</strong> tag, holds the content to display.
+        Header information is used by the browser but not displayed on the page. The most common element in the header is <strong>title</strong>, which specifies the title text to be shown in the browser's top bar. 
+        The header also includes any CSS style sheets or JavaScript code to attach to the page. (We'll learn about those later.)
+        </p>
+        <h2 id="blockElements">2.1.3 Block Elements</h2>
+        <aside style="float: right;background-color: aqua;width: 400px;border: 5px solid rgb(9, 113, 231);padding: 10px;margin: 10px;">
+            <p></p><strong>block element</strong></p>
+            <p>A significant item on a web page (paragraph, list, etc.) that occupies a rectangular block of space on the page.</p>
+        </aside>
+        <p>
+            There are two types of elements: block elements and inline elements. A <em>block element</em>, such as a paragraph or bulleted list, generally represents a significant element of the page and can contain a large amount of content spanning many lines. A block element can contain other block and inline elements inside it, called nested elements; for example, a paragraph can contain a link. The browser displays each block element with a line break and vertical margins above and below it. In the following sections, we'll show several block elements you can place inside the page's body section.
+        </p>
+        
+        <h3>Paragraphs (p)</h3>
+        <table style="background-color: rgb(0, 247, 255);border: 1px solid black;">
+            <tr>
+                <td>Element</td>
+                <td>p</td>
+            </tr>
+            <tr>
+                <td>Description</td>
+                <td>Paragraph of text (block)</td>
+            </tr>
+            <tr>
+                <td>Syntax</td>
+                <td>&lt;p&gt;content&lt;/p&gt;</td>
+            </tr>
+        </table>
+    </section>
+    
+<section>
+    <p>
+    Much of the content of web pages is organized into paragraphs. Each paragraph begins with the <strong>&lt;p&gt;</strong> tag and ends with the <strong>&lt;/p&gt;</strong> tag. Each p (like all block elements) is displayed on its own line with a vertical margin above and below it.
+    The web browser displays as many words of the paragraph content as will fit in the browser window and wraps the remaining content. The web browser collapses any whitespace between words in the paragraph down to a single space. It ignores spaces or line breaks you place between words and reformats the text so that there is exactly one space between words and sentences. Example 2.3 demonstrates several paragraphs and the resulting output that would appear in the browser. Notice that the line breaks and spacing in the output are unrelated to those in the HTML source code.
+    </p>
+    
+    <pre style="background-color: #adb8f5; border: 2px rgb(151, 121, 201) solid; width: 800px; padding: 10px;">
+    &lt;p&gt;
+        You wake up at Seatac, SFO, LAX. You wake up at O'Hare, Dallas-Fort 
+        Worth, BWI. Pacific, Mountain, Central. Lose an hour, gain an hour. 
+        This is your life, and it's ending one minute at a time. 
+    &lt;/p&gt; 
+        
+    &lt;p&gt; 
+        You wake up at Air Harbor International. If you wake up at a different 
+        time, in a different place, could you wake up as a different person? 
+    &lt;/p&gt;
+    </pre>
+    <img src="img/fig2.3.png" alt="fig2.3" style="border: 2px rgb(151, 121, 201) solid; width: 800px; padding: 10px;">
+    <p style="text-align: center"><strong>Example 2.2 Paragraphs</strong></p>
+    <p>
+        We'll follow some stylistic conventions for spacing and indentation in our HTML code. We generally separate block elements by blank lines, unless their inner content is very short and fits on a single line. When the text of a paragraph spans multiple lines, we'll indent it to indicate the nesting. Since block elements can contain other block elements, we'll indicate this nesting with a line break and an increase in indentation.
+    </p>
+    <h4>Headings (h1 - h6)</h4>    
+    <table style="width:100%">
+        <tr>
+            <td>Elements</td>
+            <td>h1, h2, h3, h4, h5, h6</td>
+        </tr>
+        <tr>
+            <td>Description</td>
+            <td>Headings to label/separate sections of the page (block)</td>
+        </tr>
+        <tr>
+            <td>Syntax</td>
+            <td>&lt;h1&gt;content&lt;/h1&gt; <br>
+                &lt;h2&gt;content&lt;/h2&gt; <br>
+                ... <br>
+                &lt;h6&gt;content&lt;/h6&gt; </td> 
+        </tr>
+    </table>
+    <p>
+        Headings are used to label major sections of your page's content. There are six levels of headings, from hi to h6. Level I headings (hi) are usually for page titles, second degree headings (h2) are usually for major section headings, third degree headings (h3 ) are subsections of h2 elements, and so on. 
+        Lower level headings should only be used under headings of the next higher level; for example, you shouldn't use an h3 unless there is a preceding h2 and the h3 represents a subsection inside that h2's content. In this way, headings represent a hierarchy of the sections of a web page.
+    </p>
+    <p>
+        To reflect this hierarchy, by default the browser displays the six heading levels at different sizes. An hi is the largest header, and h6 is the smallest. On most browsers hi through h3 display with a size larger than normal text, h4 text is about the same size as normal, and h5 and h6 display heading text smaller than normal. (Later we'll learn how to change this if so desired.) <br>
+        Example 2.4 demonstrates several headings.
+    </p>   
+</section>
+
+<section>
+    <pre style="background-color: #d5dbff;border: 2px #8f9dec solid;padding: 10px;width: 800px;">
+    &lt;h1&gt;Traveler Times Newspaper&lt;/h1&gt;
+    &lt;h2&gt; Latin America &lt;/h2&gt; 
+    &lt;Puerto Escondido: Sun, Surf, and Sand &lt;/h3&gt; 
+            
+    &lt;p&gt; 
+        Puerto Escondido is known for one of the world s 
+        best surfing beaches, Playa Zicatela. ... 
+    &lt;/p&gt; 
+            
+    &lt;h3&gt;Tikal: Mayan Ruins in the Guatemalan Jungle&lt;/h3&gt; 
+            
+    &lt;p&gt; 
+        Tikal is the largest of the ancient ruined cities 
+        of the Mayan civilization. ... 
+    &lt;/p&gt;
+            
+            
+    &lt;h2&gt;Europe&lt;/h2&gt; <br>
+    &lt;h3&gt;Drunk in Dublin&lt;/h3&gt; 
+
+    &lt;p&gt; 
+        Throwin back pints with the locals in Dublin this past 
+        summer made me really appreciate the pub culture. ... 
+    &lt;/p&gt; 
+    </pre>
+    <img src="img/fig2.4.png" alt="fig2.4" style="width: 600px; border: 2px solid #8f9dec;">
+    <h4>Example 2.4 Headings (output)</h4>
+    <h5>Semantic HTML</h5>
+    <p>
+        Some web developers make th mistake of choosing tags based on how tag looks in the browser. They'll make decision like, "An h1 looks too large when I use it as the page's main header, so I'll use an h3 instead." This mistaken line of thinking causes other poor 
+        decisions, suche as creating a blank p paragraph element to get a vaertical spacing between two other elements on the page.
+    </p>
+
+    </section>
+
+</body>
+</html>
