@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    border: 1px solid blue;
+}
+
+li{
+    font-weight: bold;
+}
+
+@media (max-width: 800vh) {
+    body{
+        margin: 0 auto;
+        width: 400px;      
+    }
+}
+
+@media (min-width: 800vh) {
+    body{
+        margin: 0 auto;
+        width: 700px;      
+    }
+}
